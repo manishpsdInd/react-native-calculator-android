@@ -55,8 +55,9 @@ export default function App() {
     const numValue = parseInt(text, 10);
     if (numValue >= 1 && numValue <= 9) {
       setOperand1(text);
+      console.log('correct')
     } else {
-      setOperand1(text.replace(/^0+(?=\d)/, ''));
+      setOperand1(text.replace(/\D/g, '').replace(/^0+/, ''));
     }
   };
 
@@ -65,7 +66,7 @@ export default function App() {
     if (numValue >= 1 && numValue <= 9) {
       setOperand2(text);
     } else {
-      setOperand2(text.replace(/^0+(?=\d)/, ''));
+      setOperand2(text.replace(/\D/g, '').replace(/^0+/, ''));
     }
   };
 
@@ -130,10 +131,8 @@ export default function App() {
     </View>
     </View>
   );
-};
+}
 
-
-          
 const styles = StyleSheet.create({
   container: {
     flex: 1,
