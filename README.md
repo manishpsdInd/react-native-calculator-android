@@ -16,7 +16,10 @@
 ## Sample output
 
 ## Sample 1
-![alt text](Images/2.png)
+![alt text](Images/1.png)
 
 ## Sample 2
-![alt text](Images/1.png)
+![alt text](Images/2.png)
+
+## Sample 3
+![alt text](Images/3.png)

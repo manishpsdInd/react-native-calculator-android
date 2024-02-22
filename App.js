@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button} from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
 
-export default App = () => {
+export default function App() {
 
   const symbols = ["+", "-", "*", "/", "%"]
 
@@ -32,7 +32,6 @@ export default App = () => {
       default:
         calculatedResult = Number(operand1) + Number(operand2)
     }  
-    console.log("num1: "+operand1+" ,num2: "+operand2+" ,operator: "+operator+" , result: "+calculatedResult)
     setResult(calculatedResult.toString());
   };
 
