@@ -1,15 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, Button} from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, Linking, Image, TouchableOpacity} from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
 
 export default function App() {
-
   const symbols = ["+", "-", "*", "/", "%"]
 
   const [operator, setOperator] = React.useState('');
   const [operand1, setOperand1] = React.useState('');
   const [operand2, setOperand2] = React.useState('');
   const [result, setResult] = React.useState('');
+
+  const linkedInURL = 'https://www.linkedin.com/in/manishpsd';
+    const handleLinkedInPress = () => {
+      Linking.openURL(linkedInURL);
+  };
+  const githubURL = 'https://github.com/manishpsdInd/react-native-calculator-android';
+    const handleGitHubPress = () => {
+      Linking.openURL(githubURL);
+  };
+  const profileURL = 'https://manish-me.w3spaces.com/index.html';
+    const handleProfilePress = () => {
+      Linking.openURL(profileURL);
+  };
+  const playstoreURL = 'https://play.google.com/apps';
+    const handlePlayStorePress = () => {
+      Linking.openURL(playstoreURL);
+  };
 
   const callCalculate = () => {
     let calculatedResult=0
@@ -93,10 +109,31 @@ export default function App() {
       <View style={styles.verticalSpace} />
       <TextInput style={{ height: 40, width: 200, borderColor: 'gray', borderWidth: 1}} editable={false} textAlign={'center'}>
         Output: {result}</TextInput>
+      
+      <View style={{ position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#f2f2f2', paddingVertical: 10, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <TouchableOpacity onPress={handleGitHubPress}>
+            <Image source={require('./Images/icon-github.jpg')} style={{ width: 30, height: 30, marginRight: 10 }} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleLinkedInPress}>
+            <Image source={require('./Images/icon-linkedin.jpg')} style={{ width: 30, height: 30, marginRight: 10 }} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handlePlayStorePress}>
+            <Image source={require('./Images/icon-playstore.png')} style={{ width: 30, height: 30, marginRight: 10 }} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleProfilePress}>
+            <Image source={require('./Images/icon-profile.png')} style={{ width: 30, height: 30 }} />
+          </TouchableOpacity>
+      </View>
+
+      <Text style={{ marginTop: 5 }}>Find me on social media</Text>
+    </View>
     </View>
   );
 };
 
+
+          
 const styles = StyleSheet.create({
   container: {
     flex: 1,

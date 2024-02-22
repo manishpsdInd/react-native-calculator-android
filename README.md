@@ -23,3 +23,14 @@
 
 ## Sample 3
 ![alt text](Images/sample3.png)
+
+## Find me in social media
+
+[linkedIn](https://www.linkedin.com/in/manishpsd)
+
+[github](https://github.com/manishpsdInd/react-native-calculator-android)
+
+[playstore](https://play.google.com/apps)
+
+[profile](https://manish-me.w3spaces.com/index.html)
+
