@@ -12,7 +12,12 @@
     "expo": "~50.0.7",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-native": "0.73.4",
+    "react-native-picker-select": "^9.0.1",
+    "react-native-select-dropdown": "^3.4.0",
+    "react-native-vector-icons": "^10.0.3",
+    "react-navigation": "^5.0.0",
+    "react-select": "^5.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
